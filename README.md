@@ -13,7 +13,7 @@ It processes Exonerate output files, selects relevant alignment hits, extracts c
 The pipeline consists of the following steps:
 
 1. **Alignment filtering**
-   - Reads Exonerate output (`.out`) files, resulting from an exonerate run (exonerate --model protein2genome --percent 50 -q "$QUERY_FILE" -t "$GENOME_FILE" --showcigar yes --showquerygff yes --minintron 10 --ryo "Target %ti (%tab-%tae)\n%tas\n" > "$OUTPUT_FILE")
+   - Reads Exonerate output (`.out`) files, resulting from an exonerate run (`exonerate --model protein2genome --percent 50 -q "$QUERY_FILE" -t "$GENOME_FILE" --showcigar yes --showquerygff yes --minintron 10 --ryo "Target %ti (%tab-%tae)\n%tas\n" > "$OUTPUT_FILE"`)
    - Optionally filters alignment hits according to a user-defined raw score threshold.
 
 2. **CIGAR extraction**
