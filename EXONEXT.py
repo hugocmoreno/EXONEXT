@@ -6,7 +6,7 @@ import re
 from collections import defaultdict
     
 print("\n", "Which directory has the out files to use? ")
-direct = "Exonerate_output_all" #input()
+direct = "Exonerate_output_all"
 
 print("\n", "Which method should be used? ")
 print("  Method 2 is much faster, but not all cigar entries will be registered in the cigar_lines.xlsx output")
@@ -14,15 +14,14 @@ print("   (1) using raw out files")
 print("   (2) using hit files (out files filtered by raw score)")
 print("   (3) using hit files only for the large out files")
 
-method = 2 #int(input())
+method = 2
 
 print("\n", "Do you want to register the location and size of introns? (Y/N)")
 
-intron_input = "Y" #input()
-t0 = time.time()
+intron_input = "Y"
 
 #######################################
-#%% Filtering out files (hit script)
+#%% Filtering out files
 #######################################
 def extract_hits(file_path, threshold):
      """
@@ -188,7 +187,7 @@ print(results1.head())
 print("\n")
 
 ###################################################################
-#%% NEW: READING ANNOTATION FILES TO SELECT CIGAR LINES
+#%% READING ANNOTATION FILES TO SELECT CIGAR LINES
 def read_annotation(gtf_file):
     """
     Returns:
@@ -254,7 +253,8 @@ for gtf in annotation_files:
     all_annotations[key] = gene_dict
  
 #####################################################################
-#%% Sequence selection (select hits to extract and create cut files) MAX SCORE FOR ACHRs AND ANNOTATED SEQUENCE FOR GRCs
+#%% Sequence selection (select hits to extract and create cut files)
+# The max score is selected for ACHRs, while the annotated sequence in the gtf file is selected for GRCs
 #####################################################################
 def extract_alignment_info(filename, cigar_line):
     """
@@ -482,7 +482,7 @@ os.chdir(cwd)
 print("\n", "Fasta sequences created!", "\n")
         
 ##############################################################################
-#%% See if the sequences are complete
+#%% Check for completeness
 ##############################################################################
 """
     Checks if the fasta sequences are not partial
@@ -545,13 +545,13 @@ results.to_excel(output_file_path, index=False)
 print("Info on completeness added to," , output_file_path)
 print("\n")  
 
-###################################
-#%% Find pseudogenes (stop codons)
-###################################
+###################################################################
+#%% Check for stop codons, frameshifts, insertions and deletions
+###################################################################
 
 def detect_sequence_stops(fasta_file):
     """
-    Detect potential pseudogenes in the fasta sequences within a specified region while maintaining reading frame.
+    Detect potential pseudogenes (standard codon table) in the fasta sequences within a specified region while maintaining reading frame.
     Creates a list of potential pseudogenes.
     
     """
