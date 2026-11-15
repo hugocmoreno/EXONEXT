@@ -2,9 +2,9 @@
 
 ## Overview
 
-This repository contains a Python pipeline for processing [Exonerate](https://www.ebi.ac.uk/about/vertebrate-genomics/software/exonerate) alignment results to identify, extract and characterise candidate gene sequences.
+This repository contains a Python pipeline for processing [Exonerate](https://github.com/nathanweeks/exonerate) alignment results to identify, extract and characterise candidate gene sequences.
 
-The pipeline was developed for comparative analysis of autosomal (ACHR) and germline-restricted chromosome (GRC) paralogs in songbirds.
+The pipeline was developed for comparative analysis of autosomal (ACHR) and germline-restricted chromosome (GRC) paralogs in birds.
 
 It processes Exonerate output files, selects relevant alignment hits, extracts coding sequences, evaluates sequence completeness and identifies potential pseudogenisation events. It can also retrieve intron positions and sizes from the original Exonerate alignments.
 
