@@ -170,3 +170,7 @@ Most intermediate Excel files are removed automatically after successful generat
 - Sequence completeness is calculated relative to the corresponding query sequence.
 - Potential pseudogenisation is assessed through the detection of stop codons and frameshift-associated features in the reconstructed alignments.
 - The intron extraction procedure uses the original Exonerate output files.
+
+## License
+
+Archived on Zenodo: [https://doi.org/10.5281/zenodo.24250316](https://doi.org/10.5281/zenodo.24250316)
