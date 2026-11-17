@@ -173,4 +173,8 @@ Most intermediate Excel files are removed automatically after successful generat
 
 ## License
 
-Archived on Zenodo: [https://doi.org/10.5281/zenodo.24250316](https://doi.org/10.5281/zenodo.24250316)
+## License
+
+This project is released under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+The version of the source code used in this study is archived on Zenodo: [https://doi.org/10.5281/zenodo.24250316](https://doi.org/10.5281/zenodo.24250316).
