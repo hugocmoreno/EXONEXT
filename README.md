@@ -1,4 +1,4 @@
-# Exonerate Gene Extraction Pipeline (EXONEXT.py)
+# Exonerate Gene Extraction Pipeline
 
 [![DOI](https://zenodo.org/badge/1282458062.svg)](https://doi.org/10.5281/zenodo.24314798)
 
