@@ -1,5 +1,7 @@
 # Exonerate Gene Extraction Pipeline (EXONEXT.py)
 
+[![DOI](https://zenodo.org/badge/1282458062.svg)](https://doi.org/10.5281/zenodo.24314798)
+
 ## Overview
 
 This repository contains a Python pipeline for processing [Exonerate](https://github.com/nathanweeks/exonerate) alignment results to identify, extract and characterise candidate gene sequences.
